@@ -251,10 +251,14 @@ justify-content: space-between;
     cursor: pointer;
 }
 
+.mobile-menu{
+    display: none;
+}
+
 
 /* Resposiveness */
 
-@media (max-width: 768px) {
+@media (max-width: 900px) {
   nav {
     display: flex;
     justify-content: space-between;
@@ -287,9 +291,6 @@ section,.gallery{
     height: 100%;
 }
 
-button{
-    width:100%;
-}
 
   .container {
      padding: 5%;
@@ -297,14 +298,54 @@ button{
 
   .gallery {
   display: grid;
- grid-template-columns: auto;
+ grid-template-columns: repeat(2, 1fr);
   
   }
   footer {
     padding:20px 5% ;
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+  }
+}
+
+@media (max-width: 600px) {
+  nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 5%;
+  }
+
+  nav img {
+  width: 100px;
+}
+
+  #menu {
+    display: block;
+  }
+
+  nav ul {
+   display: none;
+  }
+
+  .container h1 {
+    font-size: 2rem;
+  } 
+
+  .gallery{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  button{
+    width: 100%;
+  }
+
+  footer{
+    padding:20px 5% ;
+    display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
     gap: 10px;
   }
