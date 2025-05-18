@@ -1,7 +1,13 @@
 
 h1{
 color: green;
+font-family: sans-serif;
 }
 p{
 color: coral;
+font-family: fantasy;
+}
+
+ul li{
+    list-style-image: url(images/pointer-icon.png);
 }
