@@ -9,7 +9,7 @@ body {
   width: 100%;
   height: auto;
   margin: 0;
-  background: linear-gradient(#000000, #000000d2),
+  background: linear-gradient(#000000,#000000ce ,#000000),
     url("https://wallpapers.com/images/featured/avengers-vm16xv4a69smdauy.jpg");
   background-size: cover;
   object-fit: cover;
@@ -20,7 +20,7 @@ body {
 main {
   width: 100%;
   height: auto;
-  margin-top: 120px;
+
   padding: 20px 100px;
   display: flex;
   flex-direction: column;
@@ -68,7 +68,7 @@ nav img {
 
 section {
   width: 100%;
-  height: 100vh;
+  height: fit-content;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -145,10 +145,21 @@ button:hover {
 
 footer {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  
+  justify-content:space-between;
   align-items: center;
   background-color: #000000;
   color: white;
-  padding: 20px 100px;
+  padding: 30px 100px;
+  border-top: #ffffff38 1px solid;
+  width: 100%;
+}
+footer p {
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+span {
+    color: #ff0000;
+  
 }
