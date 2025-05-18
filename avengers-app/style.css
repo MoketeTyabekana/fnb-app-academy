@@ -6,8 +6,8 @@
 }
 
 body {
-  background-color: #222222;
-  height: 100vh;
+  background: linear-gradient( #000000, #000000d2), url('https://wallpapers.com/images/featured/avengers-vm16xv4a69smdauy.jpg') no-repeat center center ;
+  
 }
 
 
@@ -27,9 +27,10 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #ffffff2d;
+  background-color: #000000a2;
   color: white;
   padding: 20px 100px;
+  border-bottom: #ffffff11 1px solid;
 }
 
 ul {
