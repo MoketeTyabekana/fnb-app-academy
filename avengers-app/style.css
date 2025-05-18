@@ -283,6 +283,22 @@ form {
   text-align: start;
 }
 
+label{
+  margin-bottom: 2px;
+}
+
+input,textarea{
+  margin-bottom: 15px;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+}
+
+input:focus,textarea:focus{
+  outline: none;
+  border: 1px solid #ffffff;
+}
+
 /* Responsive styles */
 @media (max-width: 900px) {
   nav {
