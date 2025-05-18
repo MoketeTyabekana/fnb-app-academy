@@ -220,18 +220,20 @@ td {
   margin: 15px 0;
   width: 100%;
   display: flex;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   justify-content: space-between;
+  gap: 10px;
 }
 
 .power-stats p {
   font-size: 0.7rem;
-  color: #000;
+  color: #fff;
   text-align: start;
-  background-color: #fff;
-  padding: 5px;
+  background-color: #ffffff27;
+  padding: 5px 8px;
   border-radius: 50px;
   font-weight: 600;
+  border: #fff 1px solid; 
 }
 
 /* Menu styles */
@@ -298,6 +300,7 @@ td {
   .bio p {
     text-align: justify;
   }
+
   .hero-content {
     grid-template-columns: 1fr;
     gap: 10px;
@@ -312,6 +315,11 @@ td {
     padding: 20px 5%;
     gap: 10px;
   }
+
+  .power-stats {
+  justify-content: center;
+  gap: 5px;
+}
 }
 
 @media (max-width: 600px) {
