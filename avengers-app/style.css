@@ -68,7 +68,7 @@ nav img {
 
 section {
   width: 100%;
-  height: fit-content;
+   height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -163,3 +163,20 @@ span {
     color: #ff0000;
   
 }
+
+/* Bio style */
+
+.bio {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+
+
+
+
+
+
