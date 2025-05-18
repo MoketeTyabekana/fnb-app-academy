@@ -7,28 +7,22 @@
 
 body {
   width: 100%;
-  height: fit-content;
+  min-height: 100vh;
   background: linear-gradient(#000000, #000000ce, #000000),
     url("https://wallpapers.com/images/featured/avengers-vm16xv4a69smdauy.jpg");
-
   background-size: cover;
-  object-fit: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 
 main {
   width: 100%;
-  height: 100%;
+  min-height: 100vh;
   padding: 20px 100px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
-
-.gallery img {
-  width: 100%;
 }
 
 nav {
@@ -37,8 +31,12 @@ nav {
   justify-content: space-between;
   align-items: center;
   background-color: #000000a2;
-  color: white;
+  color: #fff;
   padding: 20px 100px;
+}
+
+nav img {
+  width: 150px;
 }
 
 ul {
@@ -47,22 +45,19 @@ ul {
   gap: 20px;
   color: #fff;
 }
+
 li a {
   font-size: 1rem;
   font-weight: 600;
   cursor: pointer;
   text-decoration: none;
   color: #fff;
+  transition: color 0.3s, border-bottom 0.3s;
 }
 
 li a:hover {
   color: #ff0000;
-  border-bottom: #ff0000 2px solid;
-  transition: all 0.3s ease;
-}
-
-nav img {
-  width: 150px;
+  border-bottom: 2px solid #ff0000;
 }
 
 section {
@@ -97,45 +92,49 @@ section {
 
 button {
   background-color: #ff0000;
-  color: white;
+  color: #fff;
   padding: 10px 20px;
   border: none;
   border-radius: 5px;
   cursor: pointer;
   width: 200px;
   font-size: 1rem;
+  transition: background-color 0.3s;
 }
 
 button a {
   text-decoration: none;
-  color: white;
+  color: #fff;
 }
 
 button:hover {
   background-color: #a30000;
-  transition: all 0.3s ease;
 }
 
 .gallery {
   width: 100%;
-  height: 100vh;
+  min-height: 60vh;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(3, 1fr);
   gap: 40px;
+  justify-content: center;
+  align-content: center;
 }
 
 .gallery a {
   border-radius: 10px;
   overflow: hidden;
-  border-bottom: #ffffff7a 1px solid;
+  border-bottom: 1px solid #ffffff7a;
+  transition: transform 0.3s;
+  display: block;
 }
 
 .gallery a:hover {
   transform: scale(1.05);
-  transition: all 0.3s ease;
 }
 
+.gallery img,
 .gallery a img {
   width: 100%;
   height: 100%;
@@ -144,15 +143,15 @@ button:hover {
 
 footer {
   display: flex;
-
   justify-content: space-between;
   align-items: center;
-  background-color: #000000;
-  color: white;
+  background-color: #000;
+  color: #fff;
   padding: 30px 100px;
-  border-top: #ffffff38 1px solid;
+  border-top: 1px solid #ffffff38;
   width: 100%;
 }
+
 footer p {
   font-size: 1rem;
   font-weight: 300;
@@ -162,7 +161,7 @@ span {
   color: #ff0000;
 }
 
-/* Bio style */
+/* Bio styles */
 hr {
   width: 100%;
   border: none;
@@ -175,7 +174,6 @@ hr {
   width: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   gap: 20px;
 }
 
@@ -186,165 +184,164 @@ hr {
 }
 
 .hero-content {
-     background-color: #000000; 
+  background-color: #000;
   width: 100%;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-overflow: hidden;
   gap: 20px;
-   border-radius: 10px;
+  border-radius: 10px;
+  overflow: hidden;
 }
 
 .hero-content img {
   width: 100%;
   height: 100%;
   object-fit: cover;
- 
 }
 
-.hero-text{
-    padding: 10px 20px;
-    color: #fff;
-    text-align: start;
-   
+.hero-text {
+  padding: 10px 20px;
+  color: #fff;
+  text-align: start;
 }
 
 table {
   width: 100%;
   border-collapse: collapse;
-    margin: 20px 0;
- 
+  margin: 20px 0;
 }
 
-td{
-     padding: 5px;
-     border: #ffffff18 1px solid;
+td {
+  padding: 5px;
+  border: 1px solid #ffffff18;
 }
 
 .power-stats {
-    margin: 15px 0;
+  margin: 15px 0;
   width: 100%;
   display: flex;
   flex-wrap: nowrap;
-justify-content: space-between;
-
+  justify-content: space-between;
 }
 
-.power-stats p{
-    font-size: 0.7rem;
-    color: #000000;
-    text-align: start;
-    background-color: #fff;
-    padding: 5px;
-    border-radius: 50px;
-    font-weight: 600;
+.power-stats p {
+  font-size: 0.7rem;
+  color: #000;
+  text-align: start;
+  background-color: #fff;
+  padding: 5px;
+  border-radius: 50px;
+  font-weight: 600;
 }
 
-#menu{
-    display: none;
-    
+/* Menu styles */
+#menu {
+  display: none;
 }
 
-#menu img{
-    width: 30px;
-    height: 30px;
-    cursor: pointer;
+#menu img {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
 }
 
-.mobile-menu{
-    display: none;
+.mobile-menu {
+  display: none;
 }
 
-
-/* Resposiveness */
-
+/* Responsive styles */
 @media (max-width: 900px) {
   nav {
-    display: flex;
-    justify-content: space-between;
     padding: 5%;
   }
 
   nav img {
-  width: 100px;
-}
+    width: 100px;
+  }
 
   #menu {
     display: block;
   }
 
   nav ul {
-   display: none;
+    display: none;
   }
 
   .container h1 {
     font-size: 2rem;
   }
 
-main{
-    width: 100%;
-    padding: 5%;
-    height: 100%;
-}
+  main {
+    padding: 2%;
+  }
 
-section,.gallery{
-    height: 100%;
-}
-
+  section,
+  .gallery {
+    min-height: 100%;
+  }
 
   .container {
-     padding: 5%;
+    padding: 2%;
   }
 
   .gallery {
-  display: grid;
- grid-template-columns: repeat(2, 1fr);
-  
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding: 0%;
   }
+
+  /* bio */
+  .bio {
+    padding: 5%;
+  }
+
+  .hero-content {
+    grid-template-columns: 1fr;
+    gap: 10px;
+    padding: 0%;
+  }
+
+  td{
+    padding: 3px;
+  }
+
   footer {
-    padding:20px 5% ;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    padding: 20px 5%;
     gap: 10px;
   }
 }
 
 @media (max-width: 600px) {
   nav {
-    display: flex;
-    justify-content: space-between;
     padding: 5%;
   }
 
   nav img {
-  width: 100px;
-}
+    width: 100px;
+  }
 
   #menu {
     display: block;
   }
 
   nav ul {
-   display: none;
+    display: none;
   }
 
   .container h1 {
     font-size: 2rem;
-  } 
-
-  .gallery{
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
   }
 
-  button{
+  .gallery {
+    grid-template-columns: 1fr;
+  }
+
+  button {
     width: 100%;
   }
 
-  footer{
-    padding:20px 5% ;
-    display: flex;
+  footer {
+    padding: 20px 5%;
     flex-direction: column;
     align-items: center;
     gap: 10px;
