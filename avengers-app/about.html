@@ -5,34 +5,61 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Avengers App</title>
     <link rel="stylesheet" href="style.css" />
+
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css" />
+    <script src="https://www.w3schools.com/lib/w3.js"></script>
   </head>
   <body>
-        <nav>
-      <a href="index.html"><img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/c9a27e0a-52f7-4cec-a932-b6246308a58e/df3axvk-7756d7d9-6eac-4a6e-881a-e5c9444290a8.png?
-token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.
-eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2M5YTI3ZTBhLTUyZjctNGNlYy1h
-OTMyLWI2MjQ2MzA4YTU4ZVwvZGYzYXh2ay03NzU2ZDdkOS02ZWFjLTRhNmUtODgxYS1lNWM5NDQ0MjkwYTgucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.
-1UqaHizYGXbRaARIDKntg3uOH1T_A-Oa4rDmATxZ0ac" alt=""></a>
+      <nav>
+    <a href="index.html"
+      ><img
+        src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/c9a27e0a-52f7-4cec-a932-b6246308a58e/
+df3axvk-7756d7d9-6eac-4a6e-881a-e5c9444290a8.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.
+eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9ia
+iI6W1t7InBhdGgiOiJcL2ZcL2M5YTI3ZTBhLTUyZjctNGNlYy1hOTMyLWI2MjQ2MzA4YTU4ZVwvZGYzYXh2ay03NzU2ZDdkOS02ZWFjLTRhNmUtODgxYS1lNWM5NDQ0MjkwYTgucG
+5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.1UqaHizYGXbRaARIDKntg3uOH1T_A-Oa4rDmATxZ0ac"
+        alt=""
+    /></a>
+    <li id="menu">
+      <img
+        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6N2Kga6CZUh1JQ4HjC0xLv0Qd1aHZ5zeJrw&s"
+        alt="menu "
+      />
+    </li>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
 
-  <li id="menu">
-    <img
-      src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6N2Kga6CZUh1JQ4HjC0xLv0Qd1aHZ5zeJrw&s"
-      alt="menu "
-    />
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
     <main>
-        <section>
-            
-        </section>
+      <section>
+        <div class="slider">
+          <img class="banner nature" src="images/avengers_01.jpg" alt="" />
+          <img class="banner nature" src="images/avengers_02.jpg" alt="" />
+          <img class="banner nature" src="images/avengers_03.jpg" alt="" />
+          <img class="banner nature" src="images/avengers_04.jpg" alt="" />
+        </div>
+        <div class="container">
+          <h1>About Avengers</h1>
+          <p>
+            The Avengers are a fictional superhero team appearing in American
+            comic books published by Marvel Comics. The team made its debut in
+            "The Avengers" #1, which was released in September 1963. Created by
+            writer Stan Lee and artist Jack Kirby, the Avengers are known for
+            their diverse roster of superheroes who come together to combat
+            powerful threats that no single hero could handle alone.
+          </p>
+        </div>
+      </section>
     </main>
-     <footer>
-    <p>&copy; 2025 Avengers App. All rights reserved.</p>
-    <p>Created by: <span>Mokete Tyabekana</span></p>
-  </footer>
+    <footer>
+      <p>&copy; 2025 Avengers App. All rights reserved.</p>
+      <p>Created by: <span>Mokete Tyabekana</span></p>
+    </footer>
   </body>
+  <script>
+    w3.slideshow(".nature", 3000);
+  </script>
 </html>

@@ -251,6 +251,21 @@ td {
   display: none;
 }
 
+
+/* About */
+
+.slider{
+  width: 100%;
+}
+
+.banner{
+   width: 100%;
+ height: 350px;
+  object-fit: cover;
+  object-position: center;
+  margin-top: 0%;
+}
+
 /* Responsive styles */
 @media (max-width: 900px) {
   nav {
