@@ -11,3 +11,14 @@ font-family: fantasy;
 ul li{
     list-style-image: url(images/pointer-icon.png);
 }
+
+nav a{
+font-family : Helvetica, sans-serif;
+text-decoration : none;
+background-color: aquamarine;
+padding : 5px;
+}
+nav a:hover{
+background-color: aqua;
+color : #ffffff;
+}
