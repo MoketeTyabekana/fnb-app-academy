@@ -6,12 +6,15 @@
 }
 
 body {
-  background: linear-gradient( #000000, #000000d2), url('https://wallpapers.com/images/featured/avengers-vm16xv4a69smdauy.jpg') no-repeat center center ;
-  
+  background: linear-gradient(#000000, #000000d2),
+    url("https://wallpapers.com/images/featured/avengers-vm16xv4a69smdauy.jpg")
+      no-repeat center center;
 }
 
-
 main {
+  width: 100%;
+  height: 100vh;
+  margin-top: 40px;
   padding: 20px 100px;
   display: flex;
   flex-direction: column;
@@ -38,22 +41,19 @@ ul {
   display: flex;
   gap: 20px;
   color: #fff;
- 
 }
-li a{
+li a {
   font-size: 1rem;
-    font-weight: 600;
-    cursor: pointer;
-    text-decoration: none;
-    color: #fff;
-
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  color: #fff;
 }
 
 li a:hover {
   color: #ff0000;
   border-bottom: #ff0000 2px solid;
   transition: all 0.3s ease;
-  
 }
 
 nav img {
@@ -61,6 +61,8 @@ nav img {
 }
 
 .gallery {
+  width: 100%;
+
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(3, 1fr);
@@ -84,12 +86,11 @@ nav img {
   object-fit: cover;
 }
 
-
-footer{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #fff;
-    color: white;
-    padding: 20px 100px;
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  color: white;
+  padding: 20px 100px;
 }
