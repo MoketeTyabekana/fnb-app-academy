@@ -1,0 +1,33 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+.gallery img {
+  width: 100%;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  color: white;
+  padding: 20px 100px;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  color: #fff;
+  text-decoration: none;
+}
+
+li {
+  text-decoration: none;
+  list-style: none;
+  color: white;
+}
