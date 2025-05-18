@@ -273,14 +273,47 @@ td {
 .contact{
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  background-color: #ff0000;
 }
 
+.contact-info h1{
+  color: #fff;
+  font-size: 2rem;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.contact-info p{
+  color: #fff;
+  font-size: 1rem;
+  text-align: center;
+}
+
+.contact button{
+  background-color: #fff;
+  color: #ff0000;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 200px;
+  font-size: 1rem;
+  transition: background-color 0.3s, color 0.3s;
+}
 
 form {
   width: 100%;
   display: flex;
   flex-direction: column;
   text-align: start;
+}
+
+.contact img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 5px;
 }
 
 label{
@@ -292,6 +325,7 @@ input,textarea{
   padding: 10px;
   border-radius: 5px;
   border: none;
+  background-color: #fff;
 }
 
 input:focus,textarea:focus{
@@ -368,6 +402,11 @@ input:focus,textarea:focus{
   justify-content: center;
   gap: 5px;
 }
+
+.contact{
+  display: flex;
+  flex-direction: column;
+}
 }
 
 @media (max-width: 600px) {
@@ -395,7 +434,7 @@ input:focus,textarea:focus{
     grid-template-columns: 1fr;
   }
 
-  button {
+  button, .contact button {
     width: 100%;
   }
 
