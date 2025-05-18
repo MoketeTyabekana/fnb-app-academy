@@ -12,13 +12,14 @@ ul li{
     list-style-image: url(images/pointer-icon.png);
 }
 
-nav a{
+#menu-bar a{
 font-family : Helvetica, sans-serif;
 text-decoration : none;
 background-color: aquamarine;
 padding : 5px;
 }
-nav a:hover{
+
+#menu-bar a:hover{
 background-color: aqua;
 color : #ffffff;
 }
