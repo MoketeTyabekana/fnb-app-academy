@@ -255,16 +255,21 @@ td {
 /* About */
 
 .slider{
+  margin-top: 50px;
   width: 100%;
+  border-radius: 10px;
+  overflow: hidden;
 }
 
 .banner{
    width: 100%;
- height: 350px;
+ height: 400px;
   object-fit: cover;
   object-position: center;
   margin-top: 0%;
 }
+
+
 
 /* Responsive styles */
 @media (max-width: 900px) {
