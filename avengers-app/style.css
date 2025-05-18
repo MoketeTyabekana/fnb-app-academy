@@ -292,9 +292,12 @@ td {
 
   /* bio */
   .bio {
-    padding: 5%;
+    padding: 3%;
   }
-
+ 
+  .bio p {
+    text-align: justify;
+  }
   .hero-content {
     grid-template-columns: 1fr;
     gap: 10px;
