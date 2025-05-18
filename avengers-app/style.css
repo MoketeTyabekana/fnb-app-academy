@@ -220,3 +220,72 @@ td{
      padding: 5px;
      border: #ffffff18 1px solid;
 }
+
+.power-stats {
+    margin: 15px 0;
+  width: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+justify-content: space-between;
+
+}
+
+.power-stats p{
+    font-size: 0.7rem;
+    color: #000000;
+    text-align: start;
+    background-color: #fff;
+    padding: 5px;
+    border-radius: 50px;
+    font-weight: 600;
+}
+
+
+/* Resposiveness */
+
+@media (max-width: 768px) {
+  nav {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 5%;
+  }
+
+  nav ul {
+    flex-direction: row;
+    justify-content: space-around;
+   width: 100%;
+   
+  }
+main{
+    width: 100%;
+    padding: 5%;
+    height: 100%;
+}
+
+section,.gallery{
+    height: 100%;
+}
+
+button{
+    width:100%;
+}
+
+  .container {
+     padding: 5%;
+  }
+
+  .gallery {
+  display: grid;
+ grid-template-columns: auto;
+  
+  }
+  footer {
+    padding:20px 5% ;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+}
