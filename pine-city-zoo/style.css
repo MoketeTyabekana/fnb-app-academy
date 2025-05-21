@@ -1,0 +1,30 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    background-color: #f0f0f0;
+}
+
+nav{
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    padding: 10px 100px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+ box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+   
+}
+
+nav img{
+    width: 200px;
+    height: auto;
+}
