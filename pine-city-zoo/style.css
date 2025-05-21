@@ -104,8 +104,15 @@ section {
   color: #ff7300;
 }
 
+.text-content{
+    border-left: #ff7300 3px solid;
+    padding-left: 10px;
+    height: 100%;
+}
+
 .content a .animal {
   width: 100px;
+  border-radius: 3px;
 }
 
 a .arrow {
