@@ -122,6 +122,44 @@ a .arrow {
   margin-right: 20px;
 }
 
+/* Footer Code */
+footer {
+  background-color: #2b2a2a;
+  color: #ffffff;
+  padding: 30px 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+ 
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  
+}
+
+span{
+  color: #ff7300;
+}
+
+
+.tabs-bottom {
+ display: flex;
+ flex-direction: column;
+ gap: 20px;
+ align-items: end;
+}
+
+.tabs-bottom a{
+ 
+  color: #ffffff;
+}
+
+/* Responsive Code */
+
 @media screen and (max-width: 768px) {
   nav {
     padding: 20px;
