@@ -71,10 +71,9 @@ section {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 20px;
-
   padding: 40px 100px;
   width: 100%;
-  height: 100%;
+  height: auto;
 }
 
 /* Animal Card style */
@@ -85,6 +84,7 @@ section {
   background-color: #ffffff;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
+  height: fit-content;
 }
 
 .content a {
