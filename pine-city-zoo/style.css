@@ -1,96 +1,119 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-body{
-    
-    font-family: 'Poppins', sans-serif;
-    background-color: #f0f0f0;
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #f0f0f0;
 }
 
-nav{
-    background-color: #ffffff;
-    color: rgb(0, 0, 0);
-    padding: 20px 100px;
+nav {
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+  padding: 20px 100px;
 
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
- box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    z-index: 1000;
-   
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
 }
 
-nav a img{
-    width: 200px;
-    height: auto;
+nav a img {
+  width: 200px;
+  height: auto;
 }
 
-a img{
-    cursor: pointer;
+a img {
+  cursor: pointer;
 }
 
-ul ,li{
-    list-style: none;
-    display: flex;
-    gap: 20px;
+ul,
+li {
+  list-style: none;
+  display: flex;
+  gap: 20px;
 }
 
-li{
-    font-size: 18px;
-    font-weight: 600;
-    cursor: pointer;
+li {
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
 }
 
-li a{
-    text-decoration: none;
-    color: #414141;
+li a {
+  text-decoration: none;
+  color: #414141;
 }
 
-li a:hover{
-    color: #ff7300;
-    border-bottom: 2px solid #ff7300;
+li a:hover {
+  color: #ff7300;
+  border-bottom: 2px solid #ff7300;
 }
 
-#menu img{
-    display: none;
-    height: 20px;
-    width: 20px;
+#menu img {
+  display: none;
+  height: 20px;
+  width: 20px;
 }
 
-main{
-   display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    padding: 20px 100px;
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
-section{
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    background-color: #ff7300;
-    width: 100%;
-    height: 100%;
+section {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  padding: 20px 100px;
+  width: 100%;
+  height: 100%;
 }
 
+/* Animal Card style */
 
+.content {
+  width: 100%;
+  height: auto;
+  padding: 10px;
+  background-color: #ffffff;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
 
+.content a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: #414141;
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+ 
+}
 
+.content a h3 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #ff7300;
+}
 
 @media screen and (max-width: 768px) {
-    nav{
-        padding: 20px;
-    }
-    ul{
-        display: none;
-    }
-    #menu img{
-        display: block;
-    }
-    
+  nav {
+    padding: 20px;
+  }
+  ul {
+    display: none;
+  }
+  #menu img {
+    display: block;
+  }
 }
