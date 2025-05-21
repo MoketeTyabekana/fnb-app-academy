@@ -12,7 +12,7 @@ body {
 nav {
   background-color: #ffffff;
   color: rgb(0, 0, 0);
-  padding: 20px 100px;
+  padding: 30px 100px;
 
   display: flex;
   justify-content: space-between;
@@ -64,15 +64,15 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: 100lvh;
 }
 
 section {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   gap: 20px;
 
-  padding: 20px 100px;
+  padding: 40px 100px;
   width: 100%;
   height: 100%;
 }
@@ -81,28 +81,21 @@ section {
 
 .content {
   width: 100%;
-  height: auto;
   padding: 10px;
   background-color: #ffffff;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
 }
 
-.content:hover{
-
- transition: all 0.3s ease;
-}
-
 .content a {
   display: flex;
+  justify-content: center;
   align-items: center;
-  gap: 10px;
+  column-gap: 10px;
   text-decoration: none;
   color: #414141;
-  width: 100%;
-  height: auto;
   border-radius: 5px;
- position: relative;
+  position: relative;
 }
 
 .content a h3 {
@@ -111,8 +104,8 @@ section {
   color: #ff7300;
 }
 
-.content a .animal{
-    width: 100px;
+.content a .animal {
+  width: 100px;
 }
 
 a .arrow {
@@ -121,8 +114,6 @@ a .arrow {
   margin-left: auto;
   margin-right: 20px;
 }
-
-
 
 @media screen and (max-width: 768px) {
   nav {
