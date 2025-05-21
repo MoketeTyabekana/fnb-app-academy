@@ -88,6 +88,11 @@ section {
   border-radius: 10px;
 }
 
+.content:hover{
+
+ transition: all 0.3s ease;
+}
+
 .content a {
   display: flex;
   align-items: center;
@@ -97,7 +102,7 @@ section {
   width: 100%;
   height: auto;
   border-radius: 5px;
- 
+ position: relative;
 }
 
 .content a h3 {
@@ -105,6 +110,19 @@ section {
   font-weight: 600;
   color: #ff7300;
 }
+
+.content a .animal{
+    width: 100px;
+}
+
+a .arrow {
+  width: 30px;
+  height: auto;
+  margin-left: auto;
+  margin-right: 20px;
+}
+
+
 
 @media screen and (max-width: 768px) {
   nav {
