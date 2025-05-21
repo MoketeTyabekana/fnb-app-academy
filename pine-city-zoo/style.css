@@ -125,4 +125,30 @@ a .arrow {
   #menu img {
     display: block;
   }
+
+  section {
+    grid-template-columns: 1fr;
+    padding: 10px;
+    gap: 10px;
+  }
+
+  .content {
+    padding: 8px;
+  }
+
+  .content a .animal {
+    width: 50px;
+  }
+
+  .content a h3 {
+    font-size: 16px;
+  }
+
+  .content a p {
+    font-size: 12px;
+  }
+
+  .content a .arrow {
+    width: 10px;
+  }
 }
