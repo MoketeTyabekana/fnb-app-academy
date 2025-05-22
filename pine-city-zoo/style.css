@@ -148,6 +148,45 @@ section {
   margin: 20px 0;
 }
 
+.map {
+  display: flex;
+  flex-direction: column;
+  margin-top: 90px;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 20px;
+  padding: 20px 10px;
+  background-color: #ffffff;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  width: 100%;
+}
+
+.map-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+  height: auto;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+}
+.map-container img {
+  width: 100%;
+  height: 100%;
+}
+
 /* Animal Card style */
 
 .content {
@@ -271,7 +310,7 @@ span {
     justify-content: space-between;
     align-items: center;
     padding: 0 20px;
-     margin: 74px 0 0;
+    margin: 74px 0 0;
   }
 
   .hero-content {
@@ -294,12 +333,12 @@ span {
     width: 100%;
   }
 
-  footer{
+  footer {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-self: center;
-    padding:  20px 0;
+    padding: 20px 0;
     width: 100%;
     gap: 20px;
   }
@@ -311,11 +350,10 @@ span {
     align-items: center;
   }
 
-  .tabs-bottom{
+  .tabs-bottom {
     display: flex;
     flex-direction: row;
     gap: 10px;
     align-items: center;
   }
-  
 }
