@@ -75,7 +75,10 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #ff7300;
+  background-image: url(images/wood-bg.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   padding: 0;
   margin: 96px 0 0;
 }
@@ -106,7 +109,9 @@ main {
 .hero-content p {
   font-size: 20px;
   font-weight: 400;
-  color: #2b2a2a;
+  color: #f0f0f0;
+  width: 70%;
+  line-height: 1.5;
 }
 
 .hero-image img {
@@ -116,7 +121,7 @@ main {
 }
 
 button {
-  background-color: #ffffff;
+  background-color: #2b2a2a;
   color: #ff7300;
   padding: 10px 20px;
   border: none;
@@ -133,7 +138,7 @@ button a {
 }
 
 button:hover {
-  background-color: #2b2a2a;
+  background-color: #f0f0f0;
   color: #ffffff;
   transition: all 0.3s ease-in-out;
 }
@@ -197,6 +202,26 @@ hr {
   width: 100%;
   height: 100%;
 }
+
+/* events */
+.events{
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+
+
+
+
+
+
+
 
 /* Animal Card style */
 
@@ -334,6 +359,8 @@ span {
   }
   .hero-content p {
     font-size: 16px;
+     width: 100%;
+ line-height: 1;
   }
   .hero-image img {
     width: 100%;
