@@ -5,12 +5,12 @@
 }
 
 body {
-  font-family: "Poppins", sans-serif;
+  font-family: "Fira Sans", sans-serif;
   background-color: #f0f0f0;
 }
 
 nav {
-  background-color: #ffffff;
+  background-color: #ffffffd0;
   color: rgb(0, 0, 0);
   padding: 30px 100px;
 
@@ -20,6 +20,9 @@ nav {
   width: 100%;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   z-index: 1000;
+  position: fixed;
+  top: 0;
+  left: 0;
 }
 
 nav a img {
@@ -62,9 +65,73 @@ li a:hover {
 
 main {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
+}
+
+#hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ff7300;
+  padding: 0;
+  margin: 96px 0 0;
+}
+
+.hero-content,
+.hero-image {
+  flex: 1;
+  overflow: hidden;
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 0 100px;
+}
+
+.hero-content h1 {
+  font-size: 70px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.hero-content p {
+  font-size: 20px;
+  font-weight: 400;
+  color: #2b2a2a;
+}
+
+.hero-image img {
+  width: 100%;
+  height: auto;
+  margin-bottom: -20px;
+}
+
+button {
+  background-color: #ffffff;
+  color: #ff7300;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  width: 200px;
+}
+
+button a {
+  text-decoration: none;
+  color: #ff7300;
+}
+
+button:hover {
+  background-color: #2b2a2a;
+  color: #ffffff;
+  transition: all 0.3s ease-in-out;
 }
 
 section {
@@ -73,7 +140,7 @@ section {
   gap: 20px;
   padding: 40px 100px;
   width: 100%;
-  height: auto;     
+  height: auto;
   margin: 20px 0;
 }
 
@@ -105,10 +172,10 @@ section {
   color: #ff7300;
 }
 
-.text-content{
-    border-left: #ff7300 3px solid;
-    padding-left: 10px;
-    height: 100%;
+.text-content {
+  border-left: #ff7300 3px solid;
+  padding-left: 10px;
+  height: 100%;
 }
 
 .content a .animal {
@@ -132,30 +199,26 @@ footer {
   justify-content: space-between;
   align-items: center;
   width: 100%;
- 
 }
 
 .footer-content {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  
 }
 
-span{
+span {
   color: #ff7300;
 }
 
-
 .tabs-bottom {
- display: flex;
- flex-direction: column;
- gap: 20px;
- align-items: end;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: end;
 }
 
-.tabs-bottom a{
- 
+.tabs-bottom a {
   color: #ffffff;
 }
 
