@@ -204,7 +204,7 @@ hr {
 }
 
 /* events */
-.events{
+.events {
   background-color: #fff;
   padding: 20px;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
@@ -214,14 +214,6 @@ hr {
   flex-direction: column;
   justify-content: space-between;
 }
-
-
-
-
-
-
-
-
 
 /* Animal Card style */
 
@@ -301,17 +293,19 @@ span {
   color: #ffffff;
 }
 
-.events{
+.events {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 10px;
   justify-content: space-between;
 }
-.place{
-  background-color: #414141;
+.place {
+  background-color: #f0f0f0;
   padding: 10px;
   border-radius: 6px;
 }
+
+
 
 .place img {
   width: 100px;
@@ -320,13 +314,7 @@ span {
   border-radius: 3px;
 }
 
-.place:hover {
-  background-color: #2b2a2a;
-  transition: all 0.3s ease-in-out;
-  color: #ffffff;
-}
-
-.place a{
+.place a {
   display: flex;
   align-items: center;
   gap: 10px;
@@ -341,8 +329,7 @@ span {
 
 .place a p {
   font-size: 12px;
-  color: #f0f0f0;
-  
+  color: #2b2a2a;
 }
 
 .location {
@@ -356,6 +343,35 @@ span {
   height: 20px;
 }
 
+.location p {
+  font-size: 12px;
+  color: #f0f0f0;
+  font-weight: 600;
+}
+
+/* Table */
+
+table {
+  width: 70%;
+  border-collapse: collapse;
+}
+
+
+th,
+td {
+  border: 1px solid #f0f0f0;
+  padding: 10px;
+  text-align: left;
+}
+th {
+  background-color: #414141;
+  color: #ffffff;
+  font-weight: bold;
+}
+tfoot td {
+  font-weight: bold;
+  text-align: center;
+}
 
 /* Responsive Code */
 
@@ -415,8 +431,8 @@ span {
   }
   .hero-content p {
     font-size: 16px;
-     width: 100%;
- line-height: 1;
+    width: 100%;
+    line-height: 1;
   }
   .hero-image img {
     width: 100%;
@@ -449,5 +465,31 @@ span {
     flex-direction: row;
     gap: 10px;
     align-items: center;
+  }
+
+  .events {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 10px;
+    justify-content: space-between;
+    padding: 8px;
+  }
+
+  .places,
+  .map {
+    padding: 4px;
+  }
+
+  table{
+    width: 100%;
+    font-size: 14px;
+  }
+
+  .info {
+    padding: 10px;
+  }
+
+  .info h1 {
+    font-size: 24px;
   }
 }
