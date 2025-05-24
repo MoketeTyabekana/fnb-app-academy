@@ -301,6 +301,43 @@ span {
   color: #ffffff;
 }
 
+.events{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  justify-content: space-between;
+}
+.place{
+  background-color: #f0f0f0;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.place img {
+  width: 120px;
+  height: auto;
+  border-radius: 6px;
+}
+
+.place a{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+}
+
+.place a h3 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #414141;
+}
+
+.place a p {
+  font-size: 14px;
+  color: #7a7a7a;
+  
+}
+
 /* Responsive Code */
 
 @media screen and (max-width: 768px) {
