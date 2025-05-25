@@ -296,7 +296,7 @@ span {
 .events {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 10px;
+  gap: 20px;
   justify-content: space-between;
 }
 .place {
@@ -375,7 +375,7 @@ tfoot td {
 
 /* Responsive Code */
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 900px) {
   nav {
     padding: 20px;
   }
