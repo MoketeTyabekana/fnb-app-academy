@@ -305,8 +305,6 @@ span {
   border-radius: 6px;
 }
 
-
-
 .place img {
   width: 100px;
   height: 100px;
@@ -356,7 +354,6 @@ table {
   border-collapse: collapse;
 }
 
-
 th,
 td {
   border: 1px solid #f0f0f0;
@@ -371,6 +368,58 @@ th {
 tfoot td {
   font-weight: bold;
   text-align: center;
+}
+
+/* Weather Page */
+
+td img {
+  height: 40px;
+  width: 40px;
+  margin: 10px;
+  float: left;
+}
+
+.info-box-full {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+}
+
+
+.info a{
+ text-decoration: none;
+  display: flex;
+  text-align: start;
+ font-weight: 600;
+ color: #ff7300;
+}
+
+.info  a:hover{
+  color: #2b2a2a;
+  transition: 0.3s ease-in-out;
+}
+
+h1.info-box-weather-icon {
+  font-size: 65px;
+  font-weight: 200;
+  padding: 0;
+  margin: 0;
+}
+
+
+.weather-content {
+  width: 70%;
+  margin: 20px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 10px;
+  background-color: #f0f0f0;
+  border-radius: 10px;
 }
 
 /* Responsive Code */
@@ -480,7 +529,7 @@ tfoot td {
     padding: 4px;
   }
 
-  table{
+  table {
     width: 100%;
     font-size: 14px;
   }
