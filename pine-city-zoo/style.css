@@ -372,7 +372,7 @@ tfoot td {
 
 /* Weather Page */
 
-caption{
+caption {
   font-size: 24px;
   font-weight: bold;
   color: #ff7300;
@@ -402,15 +402,15 @@ td img {
   transition: 0.3s ease-in-out;
 }
 
-.info a{
- text-decoration: none;
+.info a {
+  text-decoration: none;
   display: flex;
   text-align: start;
- font-weight: 600;
- color: #ff7300;
+  font-weight: 600;
+  color: #ff7300;
 }
 
-.info  a:hover{
+.info a:hover {
   color: #2b2a2a;
   transition: 0.3s ease-in-out;
 }
@@ -422,7 +422,6 @@ h1.info-box-weather-icon {
   margin: 0;
 }
 
-
 .weather-content {
   width: 70%;
   margin: 20px 0 0 0;
@@ -432,36 +431,39 @@ h1.info-box-weather-icon {
   gap: 20px;
   padding: 10px;
   background-color: #f0f0f0;
-  
 }
 
 /* feedback page */
 
 
-.feedback{
-  display: flex ;
-  
+.feedback {
+    display: flex;
   justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 20px;
+ 
+  background-color: #ffffff;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  width: 100%;
 }
 
-.info-box{
+.info-box {
   flex: 1;
- 
- 
 }
 
-
-
-.info-box input, .info-box a, textarea {
+.info-box input,
+.info-box a,
+textarea {
   width: 100%;
   padding: 10px;
-  
+
   border: 1px solid #ccc;
   border-radius: 5px;
-  
 }
 
-.info-box a.button{
+.info-box a.button {
   text-decoration: none;
   color: #ff7300;
   font-weight: 600;
@@ -469,7 +471,7 @@ h1.info-box-weather-icon {
   background-color: #414141;
 }
 
-a.home-link{
+a.home-link {
   border: none;
   color: #ff7300;
   font-weight: 600;
@@ -481,27 +483,24 @@ img.info-box {
   object-fit: cover;
 }
 
-.info-box button:hover{
+.info-box button:hover {
   background-color: #ff7300;
   color: #ffffff;
   transition: all 0.3s ease-in-out;
 }
 
-.feedback-box{
- display: flex;
- flex-direction: column;
- gap: 20px;
-  padding: 20px;
-  background-color: #ffffff;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-  border-radius: 10px 0 0 10px;
-
+.feedback-box {
+  display: flex;
+  flex-direction: column;
+ 
+ 
 }
 
-form{
+form {
   display: flex;
   flex-direction: column;
   gap: 10px;
+  padding: 10px;
 }
 
 /* Responsive Code */
@@ -607,7 +606,8 @@ form{
   }
 
   .places,
-  .map, .feedback {
+  .map,
+  .feedback {
     padding: 4px;
   }
 
@@ -624,13 +624,14 @@ form{
     font-size: 24px;
   }
 
-  .weather-content, hr ,table{
+  .weather-content,
+  hr,
+  table {
     width: 100%;
   }
 
-  .feedback{
+  .feedback {
     display: flex;
     flex-direction: column-reverse;
-    
   }
 }
