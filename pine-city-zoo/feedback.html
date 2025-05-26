@@ -8,20 +8,24 @@
   </head>
 
   <body>
-
     <main>
       <section class="map places">
-        <div class="info">
-            <div id="info-box-full">
-<img src="images/giraffe-large.jpg>
-<h3>WE'D LOVE TO HERE FROM YOU</h3>
-<p>We always strive to do best, so your feedback is very important to us.
-Please fill in the form below</p>
-<input type="text" placeholder="Your name" id="name">
-<input type="text" placeholder="Your email" id="email">
-<textarea placeholder="Type your message here"></textarea>
-<a class="button" href="message-received.html">SUBMIT</a>
-</div>
+        <div class="feedback">
+          <div class="info-box feedback-box">
+              <a class="home-link" href="index.html">← Return Home</a>
+            <h1>WE'D LOVE TO HEAR FROM YOU</h1>
+            <p>
+              We always strive to do best, so your feedback is very important to
+              us. Please fill in the form below
+            </p>
+            <form action="message-received.html" method="get">
+              <input type="text" placeholder="Your name" id="name" name="name" required />
+              <input type="email" placeholder="Your email" id="email" name="email" required />
+              <textarea rows="4" placeholder="Type your message here" name="message" required></textarea>
+              <button class="button" type="submit">SUBMIT</button>
+            </form>
+          </div>
+          <img class="info-box" src="images/giraffe-large.jpg" alt="" />
         </div>
       </section>
     </main>

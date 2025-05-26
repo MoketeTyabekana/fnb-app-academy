@@ -437,28 +437,71 @@ h1.info-box-weather-icon {
 
 /* feedback page */
 
-input{
-width: 100%;
-height: 25px;
-margin : 12px 0;
-border : 1px solid #929292;
+
+.feedback{
+  display: flex ;
+  
+  justify-content: center;
 }
-textarea{
-width: 100%;
-height :25px;
-margin : 12px 0;
-border : 1px solid #929292;
+
+.info-box{
+  flex: 1;
+ 
+ 
 }
-.button{
-display : block;
-background-color: forestgreen;
-text-decoration : none;
-text-align  : center;
-color       : white;
-font-size   : 16px;
-font-weight : 600;
-margin : 12px 0;
-padding : 8px 0;
+
+
+
+.info-box input, .info-box a, textarea {
+  width: 100%;
+  padding: 10px;
+  
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  
+}
+
+.info-box a.button{
+  text-decoration: none;
+  color: #ff7300;
+  font-weight: 600;
+  text-align: center;
+  background-color: #414141;
+}
+
+a.home-link{
+  border: none;
+  color: #ff7300;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+img.info-box {
+  border-radius: 0 10px 10px 0;
+  object-fit: cover;
+}
+
+.info-box button:hover{
+  background-color: #ff7300;
+  color: #ffffff;
+  transition: all 0.3s ease-in-out;
+}
+
+.feedback-box{
+ display: flex;
+ flex-direction: column;
+ gap: 20px;
+  padding: 20px;
+  background-color: #ffffff;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  border-radius: 10px 0 0 10px;
+
+}
+
+form{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
 /* Responsive Code */
@@ -564,7 +607,7 @@ padding : 8px 0;
   }
 
   .places,
-  .map {
+  .map, .feedback {
     padding: 4px;
   }
 
@@ -579,5 +622,15 @@ padding : 8px 0;
 
   .info h1 {
     font-size: 24px;
+  }
+
+  .weather-content, hr ,table{
+    width: 100%;
+  }
+
+  .feedback{
+    display: flex;
+    flex-direction: column-reverse;
+    
   }
 }
