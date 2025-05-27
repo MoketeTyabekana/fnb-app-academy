@@ -8,15 +8,12 @@
     <script defer src="script.js"></script>
   </head>
   <body>
-    <form>
-      <label for="usernameInput">Username:</label>
-      <input type="text" id="usernameInput" />
-      <br />
-      <label for="passwordInput">Password:</label>
-      <input type="password" id="passwordInput" />
-      <br />
-      <p id="message"></p>
-      <button onclick="checkUserCreds()" type="submit">Submit</button>
-    </form>
+     <div class="login-container">
+    <h2>Login</h2>
+    <input id="usernameInput" type="text" placeholder="Username" autocomplete="username" />
+    <input id="passwordInput" type="password" placeholder="Password" autocomplete="current-password" />
+    <button onclick="verifyUser()">Login</button>
+    <div id="message"></div>
+  </div>
   </body>
 </html>

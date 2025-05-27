@@ -1,22 +1,52 @@
 
-// This script handles the login form submission and user verification.
 
-function verifyUser(){
-let username = document.getElementById("usernameInput").value;
-let password = document.getElementById("passwordInput").value;
-checkUserCreds(username, password);
-}
-// This function checks the user credentials against a predefined list of users.
-// For simplicity, this example uses a hardcoded list of users.
-function checkUserCreds(username,password){
-
-  let systemUsername = "Bond";
-let systemPassword = "007";
-
-if (username === systemUsername && password === systemPassword) {
-    document.getElementById("message").innerHTML = "Correct. Logging you in…";
-} else {
-    document.getElementById("message").innerHTML = "Username or password are incorrect";
+function verifyUser() {
+  const username = document.getElementById("usernameInput").value.trim();
+  const password = document.getElementById("passwordInput").value.trim();
+  checkUserCreds(username, password);
 }
 
+function checkUserCreds(username, password) {
+  const systemUsername = "Bond";
+  const systemPassword = "007";
+  const messageElem = document.getElementById("message");
+
+  // Clear previous classes
+  messageElem.classList.remove("success");
+  messageElem.classList.remove("error");
+
+  if (!username || !password) {
+    messageElem.textContent = "Please enter both username and password.";
+    messageElem.classList.remove("success");
+    messageElem.classList.add("error");
+    setTimeout(() => { messageElem.textContent = ""; }, 2000);
+    return;
+  }
+
+  if (username === systemUsername && password === systemPassword) {
+    messageElem.textContent = "Correct. Logging you in…";
+    messageElem.classList.add("success");
+    setTimeout(() => {
+      messageElem.textContent = "";
+      // Optionally redirect here, e.g. window.location.href = "dashboard.html";
+    }, 2000);
+  } 
+  else {
+    messageElem.textContent = "Username or password are incorrect";
+    messageElem.classList.remove("success");
+    messageElem.classList.add("error");
+    setTimeout(() => { messageElem.textContent = ""; }, 2000);
+  }
 }
+
+// Optional: allow pressing Enter to submit
+document.addEventListener("DOMContentLoaded", function () {
+  const inputs = document.querySelectorAll("#usernameInput, #passwordInput");
+  inputs.forEach(input => {
+    input.addEventListener("keyup", function (e) {
+      if (e.key === "Enter") {
+        verifyUser();
+      }
+    });
+  });
+});
