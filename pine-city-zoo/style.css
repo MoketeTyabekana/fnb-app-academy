@@ -508,19 +508,20 @@ form {
 
 .animal-image{
   flex: 1;
-  height: 100%;
+  height: auto;
   object-fit: cover;
   border-radius: 3px;
+  margin: 0;
+  padding: 0;
 }
 
 .animal-content {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
   text-align: justify;
-  gap: 10px;
   flex: 	1;
+  
 }
 
 /* Responsive Code */
