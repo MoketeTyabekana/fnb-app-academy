@@ -11,6 +11,8 @@ function checkUserCreds(username, password) {
   const systemPassword = "007";
   const messageElem = document.getElementById("message");
 
+  messageElem.style.display = "block";
+
   // Clear previous classes
   messageElem.classList.remove("success");
   messageElem.classList.remove("error");
