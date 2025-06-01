@@ -13,7 +13,7 @@ function checkUserCreds(username, password) {
 
   messageElem.style.display = "block";
 
-  // Clear previous classes
+ 
   messageElem.classList.remove("success");
   messageElem.classList.remove("error");
 
@@ -30,7 +30,7 @@ function checkUserCreds(username, password) {
     messageElem.classList.add("success");
     setTimeout(() => {
       messageElem.textContent = "";
-      // Optionally redirect here, e.g. window.location.href = "dashboard.html";
+    window.location.href = "dashboard.html";
     }, 2000);
   } 
   else {
@@ -41,7 +41,6 @@ function checkUserCreds(username, password) {
   }
 }
 
-// Optional: allow pressing Enter to submit
 document.addEventListener("DOMContentLoaded", function () {
   const inputs = document.querySelectorAll("#usernameInput, #passwordInput");
   inputs.forEach(input => {
