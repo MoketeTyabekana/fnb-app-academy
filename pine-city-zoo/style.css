@@ -507,10 +507,20 @@ form {
 /* Animals content */
 
 .animal-image{
-  width: 100%;
-  height: 250px;
+  flex: 1;
+  height: 100%;
   object-fit: cover;
   border-radius: 3px;
+}
+
+.animal-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: justify;
+  gap: 10px;
+  flex: 	1;
 }
 
 /* Responsive Code */
