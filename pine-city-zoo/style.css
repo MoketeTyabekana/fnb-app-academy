@@ -521,7 +521,11 @@ form {
   justify-content: center;
   text-align: justify;
   flex: 	1;
-  
+
+}
+
+.animal-content h1{
+  margin: 5px 0;
 }
 
 /* Responsive Code */
