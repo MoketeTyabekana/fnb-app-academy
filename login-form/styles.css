@@ -159,6 +159,13 @@ h2 {
 
 }
 
+.login-container p {
+  text-align: center;
+  margin-top: 10px;
+  color: #333;
+  font-size: 14px;
+}
+
 @media screen and (max-width: 768px) {
   .login-container {
     width: 90%;
