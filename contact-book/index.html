@@ -49,7 +49,16 @@
             return response.json();
           })
           .then(function (data) {
-            displayOutput(data);
+            try {
+              displayOutput(data);
+            } catch (error) {
+              document.getElementById("table").innerHTML = "<p style='color:red;'>Error displaying contacts.</p>";
+              console.error("Display error:", error);
+            }
+          })
+          .catch(function (error) {
+            document.getElementById("table").innerHTML = "<p style='color:red;'>Failed to fetch contacts.</p>";
+            console.error("Fetch error:", error);
           });
       }
 
