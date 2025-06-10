@@ -64,19 +64,25 @@
 
         let output = "<table class='table'>";
 
+        
+        const nameRegex = /^[A-Za-z]+$/;
+
         for (let a in contactArray) {
-       
+          const first = contactArray[a].firstname ? contactArray[a].firstname.trim() : "";
+          const last = contactArray[a].lastname ? contactArray[a].lastname.trim() : "";
+
+          
           if (
-            contactArray[a].firstname &&
-            contactArray[a].lastname &&
-            contactArray[a].firstname.trim() !== "" &&
-            contactArray[a].lastname.trim() !== ""
+            first &&
+            last &&
+            nameRegex.test(first) &&
+            nameRegex.test(last)
           ) {
             output += `
               <tr onclick="editContact(${contactArray[a].id})">
                 <td><img src="${rootPath}controller/uploads/${contactArray[a].avatar}" width="40" height="40"/></td>
-                <td><h4>${contactArray[a].firstname}</h4></td>
-                <td><h4>${contactArray[a].lastname}</h4></td>
+                <td><h4>${first}</h4></td>
+                <td><h4>${last}</h4></td>
               </tr>
             `;
           }
