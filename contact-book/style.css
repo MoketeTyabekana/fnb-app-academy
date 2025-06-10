@@ -20,7 +20,11 @@ nav {
 
 #table{
     width: 100%;
-    padding: 10%;
+    padding: 10px 10%;
+}
+
+.table{
+    width: 100%;
 }
 
 
@@ -43,4 +47,21 @@ tr {
 td img {
   border-radius: 50%;
   object-fit: cover;
+}
+
+.buttons{
+    width: 100%;
+    display: flex;
+    padding: 20px 10%;
+    gap: 10px;
+}
+
+.buttons button {
+  flex: 1;
+  padding: 10px;
+  background-color: #002a60;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 }
