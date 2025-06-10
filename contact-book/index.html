@@ -62,16 +62,24 @@
           return 0;
         });
 
-        output = "<table class='table'>";
+        let output = "<table class='table'>";
 
-        for (a in contactArray) {
-          output += `
-                    <tr onclick="editContact(${contactArray[a].id})">
-                        <td><img src="${rootPath}controller/uploads/${contactArray[a].avatar}" width="40" height="40"/></td>
-                        <td><h4  >${contactArray[a].firstname}</h4></td>
-                        <td><h4 >${contactArray[a].lastname}</h4></td>
-                    </tr>
-                    `;
+        for (let a in contactArray) {
+       
+          if (
+            contactArray[a].firstname &&
+            contactArray[a].lastname &&
+            contactArray[a].firstname.trim() !== "" &&
+            contactArray[a].lastname.trim() !== ""
+          ) {
+            output += `
+              <tr onclick="editContact(${contactArray[a].id})">
+                <td><img src="${rootPath}controller/uploads/${contactArray[a].avatar}" width="40" height="40"/></td>
+                <td><h4>${contactArray[a].firstname}</h4></td>
+                <td><h4>${contactArray[a].lastname}</h4></td>
+              </tr>
+            `;
+          }
         }
 
         output += "</table>";
