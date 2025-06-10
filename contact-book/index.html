@@ -35,7 +35,7 @@
     </nav>
 
     <section>
-      <input type="search" id="search" placeholder="Search Contacts" />
+      <input type="search" id="search" placeholder="Search Contacts" onclick="search()"/>
       <div id="table">
         <p id="loading-text">Contacts Loading...</p>
       </div>
@@ -92,6 +92,20 @@
 
       function addContact() {
         window.open("insert-contact.html?", "_self");
+      }
+
+      function search() {
+        const searchValue = document.getElementById("search").value.toLowerCase();
+        const rows = document.querySelectorAll(".table tr");
+
+        rows.forEach((row) => {
+          const name = row.querySelector("td:nth-child(2) h4").textContent.toLowerCase();
+          if (name.includes(searchValue)) {
+            row.style.display = "";
+          } else {
+            row.style.display = "none";
+          }
+        });
       }
     </script>
   </body>
