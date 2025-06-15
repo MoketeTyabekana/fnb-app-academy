@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="style.css" />
     <link
       rel="stylesheet"
-href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
     />
   </head>
   <body class="add">
@@ -17,8 +17,8 @@ href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
       <label for="name">Firstname</label>
       <input
         type="text"
-        id="name"
-        name="name"
+        id="firstname"
+        name="firstname"
         placeholder="Firstname"
         required
       />
@@ -26,8 +26,8 @@ href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
       <label for="surname">Surname</label>
       <input
         type="text"
-        id="surname"
-        name="surname"
+        id="lastname"
+        name="lastname"
         placeholder="Surname"
         required
       />
@@ -73,10 +73,15 @@ href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
         console.error("rootPath is not defined. Please check config.js.");
       }
     </script>
-    
+
     <script>
       function submitForm(e) {
         e.preventDefault();
+
+        if (typeof apiKey === "undefined") {
+          alert("apiKey is not defined. Please check config.js.");
+          return;
+        }
 
         const form = new FormData(document.querySelector("#editForm"));
         form.append("apiKey", apiKey);
@@ -101,15 +106,12 @@ href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
           });
       }
 
- 
       document.addEventListener("DOMContentLoaded", function () {
-      
         const form = document.querySelector("#editForm");
         if (form) {
           form.addEventListener("submit", submitForm);
         }
 
-      
         const cancelBtn = document.getElementById("cancelButton");
         if (cancelBtn) {
           cancelBtn.addEventListener("click", function () {
