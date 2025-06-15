@@ -121,6 +121,10 @@ font-weight: 600;
   flex: 1;
 }
 
+.contact-buttons button:hover {
+  background-color: #001a40;
+}
+
 input:focus {
   outline: none;
   border: #002a60 2px solid;
