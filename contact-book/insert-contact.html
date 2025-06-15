@@ -6,7 +6,7 @@
     <title>Edit Contact</title>
     <link rel="stylesheet" href="style.css" />
     <script defer src="config.js"></script>
-    <script defer src="insert-contact.js"></script>
+   
   </head>
   <body class="add">
     <form id="editForm">
@@ -26,12 +26,13 @@
       <input type="email" id="email" name="email" placeholder="Email Address" required />
 <br>
 <label for="avatar">Avatar</label>
-<input accept="image/*" type="file" name="avatar" file-t id="avatar" title="Upload avatar">
+<input accept="image/*" type="file" name="avatar" id="avatar" title="Upload avatar">
 <br>
         <div class="contact-buttons">
-          <button type="submit" id="submitForm" ">Add Contact</button>
-          <button type="button" id="cancelButton" onclick="window.location.href='index.html'" ">Home</button>
+          <button type="submit" id="submitForm">Add Contact</button>
+          <button type="button" id="cancelButton">Home</button>
         </div>
     </form>
   </body>
+   <script src="insert-contact.js"></script>
 </html>
