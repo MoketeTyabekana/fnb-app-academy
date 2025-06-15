@@ -85,11 +85,12 @@ td h4{
   gap: 20px;
 }
 
-/* .buttons span:hover { */
-/* background-color: #001a40; */
-/* padding: 5px; */
-/* border-radius: 50%; */
-/* } */
+.contact-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 10px;
+}
 
 input {
   width: 100%;
