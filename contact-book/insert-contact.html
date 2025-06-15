@@ -7,8 +7,7 @@
     <link rel="stylesheet" href="style.css" />
     <link
       rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Material+Symbols
-+Outlined"
+href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
     />
   </head>
   <body class="add">
@@ -36,7 +35,7 @@
       <br />
       <label for="cellphone">cellphone No.</label>
       <input
-        type="number"
+        type="tel"
         id="cellphone"
         name="cellphone"
         placeholder="Cellphone Number"
@@ -68,6 +67,13 @@
     </form>
 
     <script src="config.js"></script>
+
+    <script>
+      if (typeof rootPath === "undefined") {
+        console.error("rootPath is not defined. Please check config.js.");
+      }
+    </script>
+    
     <script>
       function submitForm(e) {
         e.preventDefault();
@@ -86,24 +92,24 @@
             return response.text();
           })
           .then(function (data) {
-            if (data === "success") {
+            if (data === "1") {
               alert("Contact added successfully!");
-              window.open("index.html", "_self");
+              window.location.href = "index.html";
             } else {
               alert("Error adding contact: " + data);
             }
           });
       }
 
-      // Attach event listeners after DOM is loaded
+ 
       document.addEventListener("DOMContentLoaded", function () {
-        // Submit form event
+      
         const form = document.querySelector("#editForm");
         if (form) {
           form.addEventListener("submit", submitForm);
         }
 
-        // Cancel button event
+      
         const cancelBtn = document.getElementById("cancelButton");
         if (cancelBtn) {
           cancelBtn.addEventListener("click", function () {

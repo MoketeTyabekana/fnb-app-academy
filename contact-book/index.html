@@ -8,8 +8,7 @@
 
     <link
       rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
-    />
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"/>
   </head>
   <body onload="fetchContacts()">
     <nav>
@@ -43,60 +42,30 @@
     <script src="config.js"></script>
     <script>
       function fetchContacts() {
-        fetch(rootPath + "controller/get-contacts/")
-          .then(function (response) {
-            return response.json();
-          })
-          .then(function (data) {
-            try {
-              displayOutput(data);
-            } catch (error) {
-              document.getElementById("table").innerHTML =
-                "<p style='color:red;'>Error displaying contacts.</p>";
-              console.error("Display error:", error);
-            }
-          })
-          .catch(function (error) {
-            document.getElementById("table").innerHTML =
-              "<p style='color:red;'>Failed to fetch contacts.</p>";
-            console.error("Fetch error:", error);
-          });
+           fetch(rootPath + 'controller/get-contacts/')
+                    .then(function(response) {
+                        return response.json();
+                    })
+                    .then(function(data) {
+                            displayOutput(data);
+                    })
       }
 
       function displayOutput(contactArray) {
-        contactArray.sort(function (a, b) {
-          const nameA = (a.firstname + " " + a.lastname).toLowerCase();
-          const nameB = (b.firstname + " " + b.lastname).toLowerCase();
-          if (nameA < nameB) return -1;
-          if (nameA > nameB) return 1;
-          return 0;
-        });
+           output = "<table class='table'>";
 
-        let output = "<table class='table'>";
+            for (a in contactArray) {
+                output += `
+                    <tr onclick="editContact(${contactArray[a].id})">
+                        <td><img src="${rootPath}controller/uploads/${contactArray[a].avatar}" width="40" height="40"/></td>
+                        <td><h5 style="margin-top: 9px" >${contactArray[a].firstname}</h5></td>
+                        <td><h5 style="margin-top: 9px" >${contactArray[a].lastname}</h5></td>
+                    </tr>
+                    `;
+            }
 
-        const nameRegex = /^[A-Za-z]+$/;
-
-        for (let a in contactArray) {
-          const first = contactArray[a].firstname
-            ? contactArray[a].firstname.trim()
-            : "";
-          const last = contactArray[a].lastname
-            ? contactArray[a].lastname.trim()
-            : "";
-
-          if (first && last && nameRegex.test(first) && nameRegex.test(last)) {
-            output += `
-              <tr onclick="editContact(${contactArray[a].id})">
-                <td><img src="${rootPath}controller/uploads/${contactArray[a].avatar}" width="40" height="40"/></td>
-                <td><h4>${first}</h4></td>
-                <td><h4>${last}</h4></td>
-              </tr>
-            `;
-          }
-        }
-
-        output += "</table>";
-        document.getElementById("table").innerHTML = output;
+            output += "</table>";
+            document.getElementById("table").innerHTML = output;
       }
 
       function editContact(id) {
