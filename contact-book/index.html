@@ -19,23 +19,22 @@
       </div>
 
       <div class="buttons">
-        <span
-          class="material-symbols-outlined"
-          onclick="fetchContacts()"
-          style="cursor: pointer"
+        <span class="material-symbols-outlined" onclick="fetchContacts()"
           >refresh</span
         >
-        <span
-          class="material-symbols-outlined"
-          onclick="addContact()"
-          style="cursor: pointer"
+        <span class="material-symbols-outlined" onclick="addContact()"
           >person_add</span
         >
       </div>
     </nav>
 
     <section>
-      <input type="search" id="search" placeholder="Search Contacts" onclick="search()"/>
+      <input
+        type="search"
+        id="search"
+        placeholder="Search Contacts"
+        onclick="search()"
+      />
       <div id="table">
         <p id="loading-text">Contacts Loading...</p>
       </div>
@@ -52,12 +51,14 @@
             try {
               displayOutput(data);
             } catch (error) {
-              document.getElementById("table").innerHTML = "<p style='color:red;'>Error displaying contacts.</p>";
+              document.getElementById("table").innerHTML =
+                "<p style='color:red;'>Error displaying contacts.</p>";
               console.error("Display error:", error);
             }
           })
           .catch(function (error) {
-            document.getElementById("table").innerHTML = "<p style='color:red;'>Failed to fetch contacts.</p>";
+            document.getElementById("table").innerHTML =
+              "<p style='color:red;'>Failed to fetch contacts.</p>";
             console.error("Fetch error:", error);
           });
       }
@@ -73,20 +74,17 @@
 
         let output = "<table class='table'>";
 
-        
         const nameRegex = /^[A-Za-z]+$/;
 
         for (let a in contactArray) {
-          const first = contactArray[a].firstname ? contactArray[a].firstname.trim() : "";
-          const last = contactArray[a].lastname ? contactArray[a].lastname.trim() : "";
+          const first = contactArray[a].firstname
+            ? contactArray[a].firstname.trim()
+            : "";
+          const last = contactArray[a].lastname
+            ? contactArray[a].lastname.trim()
+            : "";
 
-          
-          if (
-            first &&
-            last &&
-            nameRegex.test(first) &&
-            nameRegex.test(last)
-          ) {
+          if (first && last && nameRegex.test(first) && nameRegex.test(last)) {
             output += `
               <tr onclick="editContact(${contactArray[a].id})">
                 <td><img src="${rootPath}controller/uploads/${contactArray[a].avatar}" width="40" height="40"/></td>
@@ -110,11 +108,15 @@
       }
 
       function search() {
-        const searchValue = document.getElementById("search").value.toLowerCase();
+        const searchValue = document
+          .getElementById("search")
+          .value.toLowerCase();
         const rows = document.querySelectorAll(".table tr");
 
         rows.forEach((row) => {
-          const name = row.querySelector("td:nth-child(2) h4").textContent.toLowerCase();
+          const name = row
+            .querySelector("td:nth-child(2) h4")
+            .textContent.toLowerCase();
           if (name.includes(searchValue)) {
             row.style.display = "";
           } else {

@@ -1,13 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Add New Contact</title>
-     <link rel="stylesheet" href="style.css">
- <script src="config.js"></script>
-</head>
-<body>
-    
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Edit Contact</title>
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="config.js"></script>
+  </head>
+  <body class="add">
+    <form id="editForm">
+        <h2>Add New Contact</h2>
+      <br />
+      <label for="name">Firstname</label>
+      <input type="text" id="name" name="name" placeholder="Firstname" required />
+      <br />
+      <label for="surname">Surname</label>
+      <input type="text" id="surname" name="surname" placeholder="Surname" required />
+
+      <br />
+      <label for="cellphone">cellphone No.</label>
+      <input type="number" id="cellphone" name="cellphone" placeholder="Cellphone Number" required />
+      <br />
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" placeholder="Email Address" required />
+<br>
+        <div class="contact-buttons">
+          <button type="submit" id="submitButton" ">Add Contact</button>
+          <button type="button" id="cancelButton" onclick="window.location.href='index.html'" ">Cancel</button>
+        </div>
+    </form>
+  </body>
 </html>
