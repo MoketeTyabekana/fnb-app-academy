@@ -21,6 +21,12 @@ nav {
   padding: 20px 10%;
 }
 
+.api-class{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
 .logo {
   display: flex;
   gap: 15px;

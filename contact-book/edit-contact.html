@@ -10,8 +10,7 @@
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
     />
   </head>
-  <body class="add" onload="fetchContact()">
-    
+  <body class="add" onload="getContact()">
     <div id="avatarImage"></div>
     <form id="editForm">
       <label for="firstname">First name</label>
@@ -36,6 +35,9 @@
 
     <script src="config.js"></script>
     <script>
+      // Ensure rootPath is defined in config.js or define it here if missing
+      // let rootPath = "./"; // Uncomment and set if not defined in config.js
+
       let id = getId();
 
       console.log(id);
@@ -47,107 +49,42 @@
         return id;
       }
 
+      document
+        .getElementById("homeLink")
+        .addEventListener("click", function () {
+          window.open("index.html", "_self");
+        });
 
-      document.getElementById("homeLink").addEventListener("click", function () {
-        window.open("index.html", "_self");
-      });
-
-      document.getElementById("editContact").addEventListener("click", function () {
-        document.getElementById("avatarLabel").hidden = false;
-        document.getElementById("avatar").hidden = false;
-        document.getElementById("submitForm").hidden = false;
-
-        document.getElementById("firstname").readOnly = false;
-        document.getElementById("lastname").readOnly = false;
-        document.getElementById("mobile").readOnly = false;
-        document.getElementById("email").readOnly = false;
-      });
-
-      document.getElementById("deleteContact").addEventListener("click", function () {
-        if (confirm("Are you sure you want to delete this contact?")) {
-          fetch(rootPath + "controller/delete-contact/?id=" + id)
-            .then(function (response) {
-              return response.text();
-            })
-            .then(function (data) {
-              if (data == "1") {
-                alert("Contact deleted successfully!");
-                window.open("index.html", "_self");
-              } else {
-                alert("Error deleting contact: " + data);
-              }
-            });
-        }
-      });
-
-      document.getElementById("editForm").addEventListener("submit", function (e) {
-        e.preventDefault();
-
-        const form = new FormData(document.querySelector("#editForm"));
-        form.append("id", id);
-        form.append("apiKey", apiKey);
-
-        fetch(rootPath + "controller/edit-contact/", {
-          method: "POST",
-          headers: {
-            Accept: "application/json,*.*",
-          },
-          body: form,
-        })
-          .then(function (response) {
-            return response.text();
-          })
-          .then(function (data) {
-            if (data == "1") {
-              alert("Contact updated successfully!");
-              window.open("index.html", "_self");
-            } else {
-              alert("Error updating contact: " + data);
-            }
-          });
-      });
-
-      function fetchContact() {
+      function getContact() {
         fetch(rootPath + "controller/get-contact/?id=" + id)
           .then(function (response) {
             return response.json();
           })
           .then(function (data) {
-            document.getElementById("firstname").value = data.firstname;
-            document.getElementById("lastname").value = data.lastname;
-            document.getElementById("mobile").value = data.mobile;
-            document.getElementById("email").value = data.email;
-
-            if (data.avatar) {
-              document.getElementById(
-                "avatarImage"
-              ).innerHTML = `<img src="${rootPath}controller/uploads/${data.avatar}" width="100" height="100"/>`;
-            } else {
-              document.getElementById(
-                "avatarImage"
-              ).innerHTML = `<img src="default-avatar.png" width="100" height="100"/>`;
+            // display contact details
+            console.log(data);
+            if (data) {
+              document.getElementById("firstname").value = data.firstname || "";
+              document.getElementById("lastname").value = data.lastname || "";
+              document.getElementById("mobile").value = data.mobile || "";
+              document.getElementById("email").value = data.email || "";
+              if (data.avatar) {
+                document.getElementById("avatarImage").innerHTML =
+                  '<img src="' + data.avatar + '" alt="Avatar" style="width:100px;height:100px;border-radius:50%;">';
+              }
             }
+          })
+          .catch(function (error) {
+            console.error("Error fetching contact:", error);
           });
       }
 
-      document.getElementById("avatar").addEventListener("change", function (e) {
-        const file = e.target.files[0];
-        if (file) {
-          const reader = new FileReader();
-          reader.onload = function (event) {
-            document.getElementById("avatarImage").innerHTML = `<img src="${event.target.result}" width="100" height="100"/>`;
-          };
-          reader.readAsDataURL(file);
-        }
-      });
+      document.getElementById("refresh").addEventListener('click', fetchContacts);
+      document.getElementById("addContact").addEventListener('click', addContact);
 
-      if (typeof rootPath === "undefined") {
-        console.error("rootPath is not defined. Please check config.js.");
-      }
-
-
-
-
+      const name = row
+  .querySelector("td:nth-child(2) h4")
+  .textContent.toLowerCase();
     </script>
   </body>
 </html>
