@@ -35,14 +35,14 @@
 
     <script src="config.js"></script>
     <script>
-           let id=getId();
-
-           function getId() {
-               const url = window.location.href;
-               const pos=url.seach('=');
-               const id=url.slice(pos+1);
-               return id;
-           }
+      let id = getId();
+      console.log(id);
+      function getId() {
+        let url = window.location.href;
+        let pos = url.indexOf("=");
+        let id = url.slice(pos + 1);
+        return id;
+      }
     </script>
   </body>
 </html>
