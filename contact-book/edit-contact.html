@@ -35,9 +35,6 @@
 
     <script src="config.js"></script>
     <script>
-      // Ensure rootPath is defined in config.js or define it here if missing
-      // let rootPath = "./"; // Uncomment and set if not defined in config.js
-
       let id = getId();
 
       console.log(id);
@@ -61,30 +58,26 @@
             return response.json();
           })
           .then(function (data) {
-            // display contact details
-            console.log(data);
-            if (data) {
-              document.getElementById("firstname").value = data.firstname || "";
-              document.getElementById("lastname").value = data.lastname || "";
-              document.getElementById("mobile").value = data.mobile || "";
-              document.getElementById("email").value = data.email || "";
-              if (data.avatar) {
-                document.getElementById("avatarImage").innerHTML =
-                  '<img src="' + data.avatar + '" alt="Avatar" style="width:100px;height:100px;border-radius:50%;">';
-              }
-            }
-          })
-          .catch(function (error) {
-            console.error("Error fetching contact:", error);
+          console.log(data);
+  
           });
       }
 
-      document.getElementById("refresh").addEventListener('click', fetchContacts);
-      document.getElementById("addContact").addEventListener('click', addContact);
+      document.addEventListener("DOMContentLoaded", function () {
+        fetchContact();
+      });
+
+      document
+        .getElementById("refresh")
+        .addEventListener("click", fetchContacts);
+
+      document
+        .getElementById("addContact")
+        .addEventListener("click", addContact);
 
       const name = row
-  .querySelector("td:nth-child(2) h4")
-  .textContent.toLowerCase();
+        .querySelector("td:nth-child(2) h4")
+        .textContent.toLowerCase();
     </script>
   </body>
 </html>
