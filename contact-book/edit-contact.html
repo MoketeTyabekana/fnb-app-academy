@@ -11,9 +11,8 @@
     />
   </head>
   <body class="add" onload="getContact()">
-   
     <form id="editForm" class="edit-form">
-       <div id="avatarImage" class="avatarImage"></div>
+      <div id="avatarImage" class="avatarImage"></div>
       <label for="firstname">First name</label>
       <input type="text" name="firstname" id="firstname" readonly /><br />
       <label for="lastname">Last name</label>
@@ -70,18 +69,30 @@
           window.open("index.html", "_self");
         });
 
-      function displayContact(data) {
+        document
+          .getElementById("editContact")
+          .addEventListener("click", editForm);
 
+      function displayContact(data) {
         document.getElementById("firstname").value = data[0].firstname;
         document.getElementById("lastname").value = data[0].lastname;
         document.getElementById("mobile").value = data[0].mobile;
         document.getElementById("email").value = data[0].email;
 
-        avatarImg=`<img src="${rootPath}/controller/uploads/${data[0].avatar}"/> `
+        avatarImg = `<img src="${rootPath}/controller/uploads/${data[0].avatar}"/> `;
         document.getElementById("avatarImage").innerHTML = avatarImg;
-       
-
       }
+
+        function editForm(){
+          document.getElementById("firstname").removeAttribute("readonly");
+          document.getElementById("lastname").removeAttribute("readonly");
+          document.getElementById("mobile").removeAttribute("readonly");
+          document.getElementById("email").removeAttribute("readonly");
+          document.getElementById("avatar").removeAttribute("hidden");
+          document.getElementById("avatarLabel").removeAttribute("hidden");
+          document.getElementById("submitForm").removeAttribute("hidden");
+        }
+
     </script>
   </body>
 </html>
