@@ -34,7 +34,7 @@
 
       <br />
        <label for="mobile">Mobile</label>
-      <input type="text" name="mobile" id="mobile" required />
+      <input type="text" name="mobile" id="mobile" placeholder="Mobile Number" required />
       <br />
       <label for="email">Email</label>
       <input
@@ -55,8 +55,12 @@
       />
       <br />
       <div class="contact-buttons">
-        <button type="submit" id="submitForm">Add Contact</button>
-        <button type="button" id="cancelButton">Home</button>
+        <button type="submit" id="submitForm" title="Add Contact">
+          <span class="material-symbols-outlined">person_add</span>
+        </button>
+        <button type="button" id="cancelButton" title="Home">
+          <span class="material-symbols-outlined">home</span>
+        </button>
       </div>
     </form>
 

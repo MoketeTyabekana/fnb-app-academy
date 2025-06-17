@@ -11,8 +11,9 @@
     />
   </head>
   <body class="add" onload="getContact()">
-    <div id="avatarImage"></div>
-    <form id="editForm">
+   
+    <form id="editForm" class="edit-form">
+       <div id="avatarImage" class="avatarImage"></div>
       <label for="firstname">First name</label>
       <input type="text" name="firstname" id="firstname" readonly /><br />
       <label for="lastname">Last name</label>
@@ -27,9 +28,15 @@
       <button type="submit" id="submitForm" hidden>Submit</button>
 
       <div class="contact-buttons">
-        <button id="homeLink" type="button">Home</button>
-        <button id="editContact" type="button">Edit</button>
-        <button id="deleteContact" type="button">Delete</button>
+        <button id="homeLink" type="button" title="Home">
+          <span class="material-symbols-outlined">home</span>
+        </button>
+        <button id="editContact" type="button" title="Edit">
+          <span class="material-symbols-outlined">edit</span>
+        </button>
+        <button id="deleteContact" type="button" title="Delete">
+          <span class="material-symbols-outlined">delete</span>
+        </button>
       </div>
     </form>
 
@@ -70,7 +77,7 @@
         document.getElementById("mobile").value = data[0].mobile;
         document.getElementById("email").value = data[0].email;
 
-        avatarImg=`<img src="${rootPath}/controller/uploads/${data[0].avatar}" width="200px"/> `
+        avatarImg=`<img src="${rootPath}/controller/uploads/${data[0].avatar}"/> `
         document.getElementById("avatarImage").innerHTML = avatarImg;
        
 
