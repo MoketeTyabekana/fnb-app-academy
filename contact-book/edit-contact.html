@@ -10,7 +10,7 @@
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
     />
   </head>
-  <body class="add" onload="getContact()">">
+  <body class="add" onload="getContact()">
     <div id="avatarImage"></div>
     <form id="editForm">
       <label for="firstname">First name</label>
@@ -35,10 +35,9 @@
 
     <script src="config.js"></script>
     <script>
-
       let id = getId();
 
-      console.log("This is the Id: "+ id);
+      console.log("This is the Id: " + id);
 
       function getId() {
         let url = window.location.href;
@@ -47,24 +46,35 @@
         return id;
       }
 
-
       function getContact() {
         fetch(rootPath + "controller/get-contacts/?id=" + id)
           .then(function (response) {
             return response.json();
           })
           .then(function (data) {
-          console.log(data);
-  
+            displayContact(data);
+            console.log(data);
           });
       }
 
-           document
-       .getElementById("homeLink")
-       .addEventListener("click", function () {
-         window.open("index.html", "_self");
-       });
+      document
+        .getElementById("homeLink")
+        .addEventListener("click", function () {
+          window.open("index.html", "_self");
+        });
 
+      function displayContact(data) {
+
+        document.getElementById("firstname").value = data[0].firstname;
+        document.getElementById("lastname").value = data[0].lastname;
+        document.getElementById("mobile").value = data[0].mobile;
+        document.getElementById("email").value = data[0].email;
+
+        avataImg=`<img src="${rootPath}/controller/uploads/${data[0].avatar}" width="200px"/> `
+
+
+        
+      }
     </script>
   </body>
 </html>
