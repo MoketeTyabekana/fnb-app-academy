@@ -70,10 +70,10 @@
         document.getElementById("mobile").value = data[0].mobile;
         document.getElementById("email").value = data[0].email;
 
-        avataImg=`<img src="${rootPath}/controller/uploads/${data[0].avatar}" width="200px"/> `
+        avatarImg=`<img src="${rootPath}/controller/uploads/${data[0].avatar}" width="200px"/> `
+        document.getElementById("avatarImage").innerHTML = avatarImg;
+       
 
-
-        
       }
     </script>
   </body>
