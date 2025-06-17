@@ -73,6 +73,8 @@
           .getElementById("editContact")
           .addEventListener("click", editForm);
 
+          document.getElementById("submitForm").submitForm.addEventListener("click", submitForm);
+
       function displayContact(data) {
         document.getElementById("firstname").value = data[0].firstname;
         document.getElementById("lastname").value = data[0].lastname;
@@ -91,6 +93,33 @@
           document.getElementById("avatar").removeAttribute("hidden");
           document.getElementById("avatarLabel").removeAttribute("hidden");
           document.getElementById("submitForm").removeAttribute("hidden");
+        }
+
+        function submitForm(e) {
+          e.preventDefault();
+
+          const form = new FormData(document.querySelector("#editForm"));
+          form.append("id", id);
+          form.append("apiKey", apiKey);
+
+          fetch(rootPath + "controller/edit-contact/", {
+            method: "POST",
+            headers: {
+              Accept: "application/json,*.*",
+            },
+            body: form,
+          })
+            .then(function (response) {
+              return response.text();
+            })
+            .then(function (data) {
+              if (data === "1") {
+                alert("Contact updated successfully!");
+                window.location.href = "index.html";
+              } else {
+                alert("Error updating contact: " + data);
+              }
+            });
         }
 
     </script>
