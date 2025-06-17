@@ -28,7 +28,14 @@ A multi-page zoo website featuring:
 - Weather and feedback forms
 - Custom images and detailed CSS
 
-### 4. Weekly Projects (`week-1/`, `week-2/`)
+### 4. Contact Book App (`contact-book/`)
+A CRUD contact management web app:
+- Add, edit, and delete contacts
+- Avatar upload support
+- Search and filter contacts
+- API integration for persistent storage
+
+### 5. Weekly Projects (`week-1/`, `week-2/`)
 Folders containing smaller HTML/CSS projects for practice and learning, such as:
 - Basic web pages
 - Navigation and linking
@@ -48,6 +55,7 @@ Folders containing smaller HTML/CSS projects for practice and learning, such as:
 - `avengers-app/` – Avengers themed gallery website
 - `login-form/` – Login form and dashboard
 - `pine-city-zoo/` – Zoo information website
+- `contact-book/` – Contact management CRUD app
 - `week-1/`, `week-2/` – Practice projects
 
 ---
