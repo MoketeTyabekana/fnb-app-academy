@@ -112,6 +112,9 @@
             window.open("index.html", "_self");
           });
         }
+
+        document.getElementById("refresh").addEventListener('click', fetchContacts);
+        document.getElementById("addContact").addEventListener('click', addContact);
       });
     </script>
   </body>
