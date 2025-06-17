@@ -10,7 +10,7 @@
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
     />
   </head>
-  <body class="add" onload="getContact()">
+  <body class="add" onload="getContact()">">
     <div id="avatarImage"></div>
     <form id="editForm">
       <label for="firstname">First name</label>
@@ -35,9 +35,10 @@
 
     <script src="config.js"></script>
     <script>
+
       let id = getId();
 
-      console.log(id);
+      console.log("This is the Id: "+ id);
 
       function getId() {
         let url = window.location.href;
@@ -46,11 +47,6 @@
         return id;
       }
 
-      document
-        .getElementById("homeLink")
-        .addEventListener("click", function () {
-          window.open("index.html", "_self");
-        });
 
       function getContact() {
         fetch(rootPath + "controller/get-contact/?id=" + id)
@@ -63,21 +59,12 @@
           });
       }
 
-      document.addEventListener("DOMContentLoaded", function () {
-        fetchContact();
-      });
+           document
+       .getElementById("homeLink")
+       .addEventListener("click", function () {
+         window.open("index.html", "_self");
+       });
 
-      document
-        .getElementById("refresh")
-        .addEventListener("click", fetchContacts);
-
-      document
-        .getElementById("addContact")
-        .addEventListener("click", addContact);
-
-      const name = row
-        .querySelector("td:nth-child(2) h4")
-        .textContent.toLowerCase();
     </script>
   </body>
 </html>
