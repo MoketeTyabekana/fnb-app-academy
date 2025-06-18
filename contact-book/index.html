@@ -33,7 +33,6 @@
         type="search"
         id="search"
         placeholder="Search Contacts"
-        oninput="search()"
       />
       <div id="table">
         <p id="loading-text">Contacts Loading...</p>
@@ -48,6 +47,8 @@
       document
         .getElementById("addContact")
         .addEventListener("click", addContact);
+
+        document.getElementById("search").addEventListener("input", search);
 
       function fetchContacts() {
         fetch(rootPath + "controller/get-contacts/")
@@ -84,20 +85,17 @@
       }
 
       function search() {
-        const searchValue = document
-          .getElementById("search")
-          .value.toLowerCase();
+        const searchValue = document.getElementById("search").value.toLowerCase();
         const rows = document.querySelectorAll(".table tr");
-
         rows.forEach((row) => {
-          const name = row
-            .querySelector("td:nth-child(2) h5")
-            .textContent.toLowerCase();
-          if (name.includes(searchValue)) {
-            row.style.display = "";
-          } else {
+          const firstNameCell = row.querySelector("td:nth-child(2) h4");
+          const lastNameCell = row.querySelector("td:nth-child(3) h4");
+          if (!firstNameCell || !lastNameCell) {
             row.style.display = "none";
+            return;
           }
+          const fullName = (firstNameCell.textContent + " " + lastNameCell.textContent).toLowerCase();
+          row.style.display = fullName.includes(searchValue) ? "" : "none";
         });
       }
     </script>
