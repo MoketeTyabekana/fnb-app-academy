@@ -1,9 +1,9 @@
 # Strings
 
-mesaage = """Hello, World!
+message = """Hello, World!
 is cool"""
 # 
-print(mesaage)
+print(message)
 
 # advanced string formatting
 name = " Alice"
