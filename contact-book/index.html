@@ -63,6 +63,13 @@
       function displayOutput(contactArray) {
         let output = "<table class='table'>";
         for (let a in contactArray) {
+         
+          if (
+            (!contactArray[a].firstname || contactArray[a].firstname.trim() === "") &&
+            (!contactArray[a].lastname || contactArray[a].lastname.trim() === "")
+          ) {
+            continue;
+          }
           output += `
       <tr onclick="editContact(${contactArray[a].id})">
         <td><img src="${rootPath}controller/uploads/${contactArray[a].avatar}" width="40" height="40"/></td>
