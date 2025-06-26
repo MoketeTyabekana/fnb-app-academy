@@ -1,6 +1,6 @@
 # FNB App Academy
 
-This repository contains a collection of web development projects created as part of the FNB App Academy program. Each folder represents a different project or themed mini-app, showcasing HTML, CSS, and JavaScript skills.
+This repository contains a collection of web development and Python programming projects created as part of the FNB App Academy program. Each folder represents a different project or themed mini-app, showcasing HTML, CSS, JavaScript, and Python skills.
 
 ## Projects Overview
 
@@ -42,13 +42,33 @@ Folders containing smaller HTML/CSS projects for practice and learning, such as:
 - Image galleries
 - Simple forms
 
+### 6. Python Basics (`python-basics/`)
+A collection of beginner-friendly Python lessons and mini-projects covering:
+- Variables, data types, and operators
+- Strings, lists, tuples, sets, and dictionaries
+- Control statements (if, else, elif)
+- Loops (for, while, range)
+- User input and basic I/O
+- Simple projects like a shopping cart
+
+**Python lesson files include:**
+- `hello_world.py` – First Python program
+- `variables.py` – Working with variables
+- `numeric_data.py`, `operators_numeric_data.py` – Numbers and math
+- `strings.py`, `operators_strings.py` – String operations
+- `list.py`, `tuples.py`, `sets.py`, `dictionaries.py` – Data structures
+- `control_statements.py`, `control_statements_2.py` – Conditional logic
+- `loops.py`, `loops_2.py` – Looping constructs
+- `basic_shopping_cart.py` – Mini shopping cart project
+
 ## How to Use
 
 1. Clone or download this repository.
-2. Open any project folder and open the `index.html` file in your browser to view the project.
+2. Open any project folder and open the `index.html` file in your browser to view the web projects.
 3. For the login form, use:
    - **Username:** Bond
    - **Password:** 007
+4. For Python lessons, open files in the `python-basics/` folder and run them using Python 3.
 
 ## Folder Structure
 
@@ -57,7 +77,8 @@ Folders containing smaller HTML/CSS projects for practice and learning, such as:
 - `pine-city-zoo/` – Zoo information website
 - `contact-book/` – Contact management CRUD app
 - `week-1/`, `week-2/` – Practice projects
+- `python-basics/` – Python lessons and mini-projects
 
 ---
 
-Created by Mokete Tyabekana.
+Created by Mokete Tyabekana
