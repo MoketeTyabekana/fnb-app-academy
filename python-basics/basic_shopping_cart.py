@@ -5,6 +5,7 @@ foods=[]
 prices=[]
 total=0
 clientName=""
+storeName="EMT Groceries"
 date=datetime.datetime.now()
 
 clientName=input("Enter Your First Name: ")
@@ -29,6 +30,7 @@ for price in prices:
 print("\n")
 print(f"Your Total is: R{total}")
 print("\n")
-print(f"Thank You {clientName} For Shopping At Our Store.😊❤️")
+print(f"Thank You {clientName} For Shopping At {storeName}.😊❤️")
 print(date)
+print("\n")
 
